@@ -26,9 +26,38 @@ void options() {
  }
  
  //blank player skin
- ellipse(400, 400, slider-50, slider-50);
+ fill(255);
+ ellipse(460, 400, slider-50, slider-50);
  
+ // reg player skin
+ fill(255);
+ ellipse(460, 620, slider-50, slider-50);
+ imageMode(CENTER);
+ image(cookie, 460, 620, slider-100, slider-100);
+ 
+ 
+ 
+//back
+  textSize(34);
+  fill(255);
+  text("BACK", 650, 700);
+
  }
 void optionsClicks(){
+  
+    
+  if (dist(mouseX, mouseY, 650, 700) < 90) {
+    mode=GAME;
+ }
+ if (dist(mouseX, mouseY, 460, 400) < 100) {
+   mode=GAME; 
+   target = target-1;
+ }
+ if (dist(mouseX, mouseY, 460, 620) < 100) {
+   mode=GAME;
+   target = target+1;
+ }
+ 
+   
 
 }

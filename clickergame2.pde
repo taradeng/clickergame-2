@@ -21,6 +21,8 @@ final int GAMEOVER = 3;
 
 final int options = 4;
 
+int target = 7;
+
 int highscore = 5;
 
 int slider = 150; 
