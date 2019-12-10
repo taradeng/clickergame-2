@@ -3,26 +3,34 @@ void game() {
    
   //target
   strokeWeight (4);
-  fill(245, 0, 0, 23);
+
   
   if (target == 6){
- image(cookie, x-50, y-50, 100, 100);
+
  ellipse(x, y, slider-50, slider-50);
+ imageMode(CENTER);
+ image(cookie, x, y, 105, 105);
+
   }
   
-  if (target == 8) {
-    fill(255);
-     ellipse(x, y, slider-50, slider-50);
-  }
     
-  
+  if (target == 8) {
+     ellipse(x, y, slider-50, slider-50);
+}
+ if (target == 7) {
+   
+   ellipse(x, y, 100, 100);
+   imageMode(CENTER);
+   image(cookie, x, y, 105, 105);
+ }
  
-  //movement
+ 
+   //movement
   x = x + vx;
   y = y + vy;
   
   //bounce top or bottom 
-  if (y < 50 || y > 750) vy = vy * -1;
+  if (y < 55 || y > 735) vy = vy * -1;
   if (x < 50 || x > 750) vx = vx * -1;
   //50 makes bounce off edge of circle
   
@@ -41,8 +49,9 @@ void game() {
   text("pause", 700, 50);
  
 
-}
 
+  }
+  
 
 
 void gameClicks(){
@@ -62,11 +71,9 @@ void gameClicks(){
      mode = GAMEOVER; 
      bump.play();
      
-  // if (mouseX > 650 && mouseX < 750  && mouseY > 10 && mouseY < 80)
-//   mode=PAUSE;
-
-   
-  //  text("play", 700, 50);
+   if (mouseX > 650 && mouseX < 750  && mouseY > 10 && mouseY < 80)
+   mode=PAUSE;
+  
    
   
   }

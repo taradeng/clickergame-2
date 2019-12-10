@@ -18,15 +18,29 @@ void intro() {
   textSize(32);
   text("options", 600, 600);
   
+  text("highscore: " + highscore, 200, 600);
+  highscore = highscore + score;
+  
   //theme sound 
   theme.play();
   
   
 }
 
+  void highscore() {
+  if (highscore < score) { 
+    highscore=score;
+  }
+  }
+
+
 void introClicks() {
   if (mouseX > 250  && mouseX < 550  && mouseY > 350 && mouseY < 450)
   mode = GAME;
+  
+  score = 0;
+  lives = 3;
+  
   theme.pause();
   //rewind allows music to be played from the start 
   theme.rewind();

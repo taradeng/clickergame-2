@@ -2,8 +2,8 @@ void options() {
   background(0);
   textSize(34);
   fill(255);
-  text("size", 200, 300);
-  text("skin", 480, 300);
+  text("size", 200, 270);
+  text("skin", 480, 270);
 
   //slider 
   stroke(255);
@@ -15,8 +15,8 @@ void options() {
  // } else {
     fill(0);
   ellipse(slider, 400, 30, 30);
- 
- if (mousePressed) {
+  
+  if (mousePressed) {
    if (dist(slider, 400, mouseX, mouseY) < 20) {
      slider = mouseX;
      
@@ -41,23 +41,28 @@ void options() {
   textSize(34);
   fill(255);
   text("BACK", 650, 700);
-
- }
-void optionsClicks(){
   
-    
-  if (dist(mouseX, mouseY, 650, 700) < 90) {
-    mode=GAME;
- }
- if (dist(mouseX, mouseY, 460, 400) < 100) {
+  if (mousePressed) {
+
+   if (mouseX > 600  && mouseX < 750  && mouseY > 650 && mouseY < 800) {
+     mode = GAME;
+   }
+   
+   
+    if (dist(mouseX, mouseY, 460, 400) < 100) {
    mode=GAME; 
    target = target-1;
  }
  if (dist(mouseX, mouseY, 460, 620) < 100) {
    mode=GAME;
    target = target+1;
+}
+  else target = 7;
+
  }
+ }
+void optionsClicks(){
+}
+
  
    
-
-}
