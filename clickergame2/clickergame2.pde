@@ -21,9 +21,12 @@ final int GAMEOVER = 3;
 
 final int options = 4;
 
+
 int target = 7;
 
-int highscore = 5;
+int highscore= 0;
+
+//highscore==0+score
 
 int slider = 150; 
 
@@ -39,6 +42,7 @@ PImage milk2;
 float x, y, vx, vy;
 
 int score, lives;
+
 
 
 
@@ -63,6 +67,9 @@ void setup() {
   score = 0;
 
   lives = 3;
+ 
+   highscore = highscore + score;
+ 
 
   
 

@@ -43,6 +43,7 @@ void options() {
   text("BACK", 650, 700);
   
   if (mousePressed) {
+    
 
    if (mouseX > 600  && mouseX < 750  && mouseY > 650 && mouseY < 800) {
      mode = GAME;
@@ -51,13 +52,15 @@ void options() {
    
     if (dist(mouseX, mouseY, 460, 400) < 100) {
    mode=GAME; 
-   target = target-1;
+   target = target+1;
+   lives = lives +1;
  }
  if (dist(mouseX, mouseY, 460, 620) < 100) {
    mode=GAME;
-   target = target+1;
+   target = target-1;
+   lives = lives +1;
 }
-  else target = 6;
+  else target = 7;
 
  }
  }
