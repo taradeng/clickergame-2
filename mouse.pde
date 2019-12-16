@@ -11,4 +11,3 @@ void mouseReleased() {
   println("Error: Mode = " + mode);
   }
 }
-  

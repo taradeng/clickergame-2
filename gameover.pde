@@ -21,6 +21,9 @@ void gameover() {
 void gameoverClicks(){
   //**** if (mouseX > 230 && mouseX < 400  && mouseY > 300 && mouseY < 500)
   mode = INTRO;
+ highscore=score;
   theme.rewind();
   
 }
+
+   

@@ -7,6 +7,9 @@ void intro() {
   stroke(10);
   fill(15,64,2);
   ellipse(400, 400, 300, 100);
+  //issue here?
+  //milk image
+  imageMode(CORNER);
   image(milk, 300, 500, 150, 200);
   
   fill(#C9E399); //change textcolour
@@ -19,13 +22,14 @@ void intro() {
   text("options", 600, 600);
   
   text("highscore: " + highscore, 200, 600);
-  highscore = highscore + score;
+
+ 
   
   //theme sound 
   theme.play();
-  
-  
 }
+
+ 
 
   void highscore() {
   if (highscore < score) { 

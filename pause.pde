@@ -12,6 +12,7 @@ void pauseClicks(){
    
    if (dist(mouseX, mouseY, 400, 400) < 50) {
    mode=GAME;
+   lives = lives + 1;
    }
  //****   text("pause", 700, 50);
    

@@ -3,27 +3,30 @@ void game() {
    
   //target
   strokeWeight (4);
+  stroke(0);
+  
 
   
   if (target == 6){
 
+ fill(255);
  ellipse(x, y, slider-50, slider-50);
  imageMode(CENTER);
  image(cookie, x, y, 105, 105);
 
   }
   
-    
-  if (target == 8) {
-     ellipse(x, y, slider-50, slider-50);
-}
  if (target == 7) {
    
    ellipse(x, y, 100, 100);
    imageMode(CENTER);
    image(cookie, x, y, 105, 105);
  }
- 
+     
+  if (target == 8) {
+    fill(255);
+     ellipse(x, y, slider-50, slider-50);
+}
  
    //movement
   x = x + vx;
@@ -56,8 +59,9 @@ void game() {
 
 void gameClicks(){
   //centre of target is x, y. 50 is radius
-  if (dist(mouseX, mouseY, x, y) < 50) {
+  if (dist(mouseX, mouseY, x, y) < slider) {
    score = score + 1;
+ 
    coin.rewind();
    coin.play();
    //speeds up each time you click: exponential
@@ -70,6 +74,8 @@ void gameClicks(){
     // if if statement only has one, can delete braces
      mode = GAMEOVER; 
      bump.play();
+     
+    
      
    if (mouseX > 650 && mouseX < 750  && mouseY > 10 && mouseY < 80)
    mode=PAUSE;
