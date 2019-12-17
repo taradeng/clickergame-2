@@ -31,11 +31,7 @@ void intro() {
 
  
 
-  void highscore() {
-  if (highscore < score) { 
-    highscore=score;
-  }
-  }
+  
 
 
 void introClicks() {

@@ -28,10 +28,14 @@ final int GAMEOVER = 3;
 
 final int options = 4;
 
+final int COOKIE = 0;
+final int CIRCLE = 1;
+int player = COOKIE;
+
 
 int target = 7;
 
-int highscore= 0;
+int highscore;
 
 //highscore==0+score
 
@@ -75,7 +79,7 @@ void setup() {
 
   lives = 3;
  
-   highscore = highscore + score;
+   highscore = 0;
  
 
   
